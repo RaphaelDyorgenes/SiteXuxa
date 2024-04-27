@@ -10,7 +10,7 @@
 <body>
   <!-- DIV que será manipulada -->
   <div id="manipula">
-    <p>Com base nos argumentos apresentados na aula, é possivel entender que uma coisa é uma coisa e outra coisa é outra coisa, admito que não concordo nem discordo, muito pelo contrário.
+    <p class="paragrafo">Com base nos argumentos apresentados na aula, é possivel entender que uma coisa é uma coisa e outra coisa é outra coisa, admito que não concordo nem discordo, muito pelo contrário.
     </p>
     <p class="paragrafo">É factivel que a Terra é um dos planetas mais conhecidos do mundo, mesmo sabendo que a vida é uma sucessão de sucessivos que sucedem sucessivamente sem cessar.Agora, mais do que nunca, é a hora, afinal, o importante é o que importa, pois onde quer que você esteja, você sempre estará lá.
     </p>
@@ -47,35 +47,35 @@
     <!-- Botão 8 - -->
     <input type="button" value="Tira Borda" onmouseenter="excluirborder()" />
     <!--Fim Botão X-->
-    <!-- Botão X - -->
+    <!-- Botão 9 - -->
     <input type="button" value="Esconder div" onclick="esconderdiv()"/>
     <!--Fim Botão X-->
-    <!-- Botão X - -->
+    <!-- Botão 10 - -->
     <input type="button" value="Reaparece div" onclick="reaparecediv()"/>
     <!--Fim Botão X-->
-    <!-- Botão X - -->
+    <!-- Botão 11 - -->
     <input type="button" value="Nao" onclick="nao()"/>
     <!--Fim Botão X-->
     <!-- Botão X - -->
-    <input type="button" value="X" />
+    <input type="button" value="back paragrafo" onclick="background()" />
+    <!--Fim Botão X-->
+    <!-- Botão 13- -->
+    <input type="button" value="cor botao" onclick="mudacorbotao()"/>
+    <!--Fim Botão X-->
+    <!-- Botão 14 - -->
+    <input type="button" value="todos botoes" onclick="mudacorbotoes()" />
     <!--Fim Botão X-->
     <!-- Botão X - -->
-    <input type="button" value="X" />
+    <input type="button" value="conta" onclick="contabotao()" />
     <!--Fim Botão X-->
     <!-- Botão X - -->
-    <input type="button" value="X" />
+    <input type="button" value="censura" onclick="censura()"/>
     <!--Fim Botão X-->
     <!-- Botão X - -->
-    <input type="button" value="X" />
+    <input type="button" value="black fundo" onclick="fundo()"/>
     <!--Fim Botão X-->
     <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
+    <input type="button" value="se formar no senai" onclick="imagem()"/>
     <!--Fim Botão X-->
 
   </div>
@@ -135,32 +135,47 @@
     function nao() {
       document.getElementsByClassName("chamada")[0].innerHTML = "Olá Jovem"
     }
-    //fim do Botão X
+    //fim do Botão 12
     // Botão X - xx
-    function x() {
-
+    function background() {
+      document.getElementById("manipula").getElementsByClassName("paragrafo")[0].style.backgroundColor="red"
+    }
+    //fim do Botão X
+    // Botão 13 - xx
+    function mudacorbotao() {
+      document.getElementsByTagName("input")[0].style.backgroundColor = "lightblue"
     }
     //fim do Botão X
     // Botão X - xx
-    function x() {
-
+    function mudacorbotoes() {
+      var x = document.getElementById("botoes")
+      var y = x.getElementsByTagName("input")
+      var i
+      for (i= 0; i < y.length; i++){
+        y[i].style.backgroundColor = "purple"
+      }
     }
     //fim do Botão X
     // Botão X - xx
-    function x() {
-
+    function contabotao() {
+      let x = document.getElementById("botoes").getElementsByTagName("input")
+      document.getElementById("manipula").innerHTML = x.length
     }
     //fim do Botão X
-    // Botão X - xx
-    function x() {
+    // Botão X - censura
+    function censura() {
+      document.querySelector("p.paragrafo").innerHTML = "***************"
+    }
 
+    function fundo(){
+      document.querySelector("body").style.backgroundColor = "black"
     }
     //fim do Botão X
-    // Botão X - xx
-    function x() {
 
+    function imagem(){
+      var img = document.querySelector("#image")
+      img.setAttribute("src", "alien.jpg")
     }
-//fim do Botão X
   </script> <!-- Termina a brincadeira com JS -->
 
   <br>
